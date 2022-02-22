@@ -31,8 +31,8 @@ resources:
  #- argocd/namespace-ibm-infra-automation.yaml
  
  # RHSSO
- - argocd/namespace-sso.yaml
- - argocd/namespace-sso-integration.yaml
+ # - argocd/namespace-sso.yaml
+ # - argocd/namespace-sso-integration.yaml
  
  # OpenShift Service Mesh
  #- argocd/namespace-openshift-operators-redhat.yaml
@@ -41,8 +41,8 @@ resources:
  
  # OpenShift Data Foundation aka OpenShift Container Storage
  #- unneeded for IBM Cloud ROKS with ODF add-on configured
- - argocd/namespace-openshift-storage.yaml
- - argocd/storage.yaml
+ # - argocd/namespace-openshift-storage.yaml
+ # - argocd/storage.yaml
  
  # MachineSets and Infra Nodes
  #- unneeded for IBM Cloud ROKS with ODF add-on configured
@@ -60,7 +60,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/source/repoURL
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_INFRA}
+      value: https://github.com/otp-openpages/otp-gitops-infra.git
     - op: add
       path: /spec/source/targetRevision
-      value: ${GIT_GITOPS_BRANCH}
+      value: master

@@ -20,9 +20,9 @@ resources:
  - argocd/namespace-ansible-automation-platform.yaml
  
  # OpenShift Virtualization (Can be used to host Instana Instance)
- #- argocd/namespace-openshift-virtualization.yaml
- #- argocd/namespace-openshift-virtualization-os-images.yaml
- #- argocd/namespace-openshift-virtualization-virtual-machines.yaml
+ - argocd/namespace-openshift-virtualization.yaml
+ - argocd/namespace-openshift-virtualization-os-images.yaml
+ - argocd/namespace-openshift-virtualization-virtual-machines.yaml
  
  # Openshift Advanced Cluster Security
  - argocd/namespace-openshift-acs.yaml
